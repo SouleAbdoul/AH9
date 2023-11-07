@@ -9,11 +9,17 @@
  // }
   
   class Source {
+
     public static <T> Node<T> reverseList(Node<T> head) {
+        // create new null node
         Node<T> prev = null;
+       // get the current node as head
         Node<T> current = head;
+        // next node as null
         Node<T> next = null;
+        // run this loop as long as the current node has value
         while (current != null) {
+            // save the node after the current
             next = current.next;
             current.next = prev;
             prev = current;
